@@ -39,7 +39,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
 }
 
 .title {
@@ -97,6 +97,7 @@ body {
     background-color: #fffefa;
     padding: 20px;
     position: relative;
+    margin-bottom: 38px;
 }
 
 .security-actual-question__txt a {
@@ -141,13 +142,42 @@ body {
 
 /* -- ------------user-wallets-------------- - */
 
-.user-wallets {}
+.user-wallets {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
 
 .wallet {
+    /* padding: 0 30px; */
+    max-width: 24%;
+    /* padding-left: 30px; */
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 
-    max-width: 250px;
-    padding-left: 30px;
 }
+
+.border {
+    width: 2px;
+    height: 67px;
+    background-color: #c3c3c5;
+    opacity: 0.3;
+}
+
+/* .wallet::before {
+    content: "";
+    width: 2px;
+    height: 67px;
+    bottom: 7px;
+    right: 0px;
+    background-color: #c3c3c5;
+    opacity: 0.3;
+    position: absolute;
+} */
 
 .wallet__name {
     color: #7b7b7c;
@@ -187,42 +217,76 @@ body {
     font-family: "Avenir LT Std";
     font-size: 15px;
     font-weight: 300;
+    display: flex;
+
 
 }
 
-.currency-rate::after {
+/* .currency-rate ::after {
     content: url(./img/wallet/rate-up.svg);
     top: 1px;
     left: 1px;
     position: absolute;
-}
+} */
 
-.currency-rate span {
+.time {
     opacity: 0.6;
     color: #575757;
     font-family: Mina;
     font-size: 13px;
     font-weight: 400;
     margin-left: 20px;
+    position: relative;
 }
 
 .rate-up {
     color: #00ce87;
-    position: relative;
+
 }
 
-.rate-up::after {
-    content: url(./img/wallet/rate-up.svg);
+.mark-up::before {
+    content: url(./img/wallet/mark-up.svg);
     top: -8px;
-    left: 52px;
+    left: -18px;
     position: absolute;
 }
 
 .rate-down {
     color: #f85656;
+
+}
+
+.mark-down::before {
+    content: url(./img/wallet/mark-down.svg);
+    top: -8px;
+    left: -18px;
+    position: absolute;
+}
+
+.wallet__add {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.wallet__add a {
+    opacity: 0.85;
+    color: #dfdbd9;
+    font-family: Mina;
+    font-size: 22px;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
     position: relative;
 }
 
+.wallet__add a::before {
+    position: absolute;
+    content: url(./img/wallet/add-wallet.svg);
+    top: 0px;
+    left: -40px;
+}
 
 
 /* ------------SHARED-ITEMS_______________ */
@@ -230,15 +294,32 @@ body {
 .btn {
     border-radius: 3px;
     border: 1px solid #d097b950;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px;
+}
+
+.btn a {
     color: #d476af80;
     font-family: Mina;
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
-    padding: 15px 30px;
 }
 
+.block-header {
+    border-radius: 2px;
+    border: 1px solid #e2e2e2;
+    background-color: #fefefe;
+    padding: 19px 19px 19px 32px;
 
+    color: #676768;
+    font-family: Mina;
+    font-size: 24px;
+    font-weight: 400;
+
+}
 
 
 
@@ -257,23 +338,115 @@ body {
 .account-balance {
     max-width: 354px;
     width: 100%;
+    border-radius: 2px;
+    border: 1px solid #e2e2e2;
+    background-color: #fefefe;
 }
 
 .account-balance__header {
-    color: #676768;
+    /* color: #676768;
     font-family: Mina;
     font-size: 24px;
     font-weight: 400;
     padding: 30px 0 30px 30px;
+    border-radius: 2px;
+    border: 1px solid #e2e2e2;
+    background-color: #fefefe; */
 }
 
-.account-balance__data {}
+.account-balance__data {
+    padding: 35px 30px;
+}
 
-.account-balance__value {}
+.account-balance__value {
+    color: #7b7b7d;
+    font-family: "Avenir LT Std";
+    font-size: 47px;
+    font-weight: 300;
+}
 
-.account-balance__status {}
+.account-balance__value span {
+    color: #a7a7a8;
+    font-family: Mina;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
 
-.account-balance__ordered {}
+.account-balance__status {
+
+    color: #a7a7a8;
+    font-family: Mina;
+    font-size: 13px;
+    font-weight: 700;
+    position: relative;
+    margin-left: 20px;
+}
+
+.account-balance__status::before {
+    content: url(./img/balans-history/ICO_Loading.png);
+    top: 2px;
+    left: -20px;
+    position: absolute;
+}
+
+.account-balance__ordered {
+    color: #8c8c8e;
+    font-family: Mina;
+    font-size: 19px;
+    font-weight: 400;
+    font-family: "Mina";
+    font-weight: 400;
+    position: relative;
+    margin-left: 20px;
+}
+
+.account-balance__ordered::before {
+    content: url(./img/balans-history/sand-clock.svg);
+    top: 2px;
+    left: -20px;
+    position: absolute;
+}
+
+.account-balance__ordered span {
+    font-family: "Avenir LT Std";
+    font-weight: 500;
+}
+
+.currensy-small {
+    opacity: 0.8;
+    color: #a7a7a8;
+    font-family: Mina;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 5px;
+}
+
+.account-balance__footer {
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px 0 0 0;
+}
+
+.btn-balance {
+
+    padding: 15px 28px;
+    width: 120px;
+    height: 50px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.17);
+    border-radius: 3px;
+    border: 1px solid #c85172;
+    background-color: #f5638c;
+}
+
+.btn-balance a {
+    color: #ffffff;
+    font-family: Mina;
+    font-size: 19px;
+    font-weight: 700;
+    text-decoration: none;
+}
 
 /* _____________________________________________ */
 .transaction-history {
@@ -294,16 +467,57 @@ body {
 
 .diagramms {
     width: 50%;
-    background-color: rgb(218, 162, 162);
-    margin-right: 10px;
+
+}
+
+.diagramm-item {
+    border: 1px solid #e2e2e2;
+}
+
+.diagramm-item__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.diagramm-item__title {
+    color: #676768;
+    font-family: Mina;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.diagramm-item__price {
+    color: #676768;
+    font-family: "Avenir LT Std";
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.currensy-small {}
+
+.diagramm-item__btn {
+    width: 112px;
+    height: 43px;
+    padding: 15px 13px;
 }
 
 .feed {
     width: 50%;
-
-    background-color: rgb(218, 162, 162);
     margin-left: 10px;
 }
+
+.feed {}
+
+.feed__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.block-header {}
+
+.feed_title {}
+
+
 
 
 
@@ -315,19 +529,82 @@ body {
 
 .footer {
     width: 100%;
-
+    padding: 30px 0 20px 0;
     height: 150px;
     background-color: #ebe9e8;
-    padding: 30px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.footer__items {}
+.footer__items {
+    max-width: 592px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 
-.footer__social {}
+}
 
-.footer__copyrights {}
+.footer__items a {
+    color: #000000;
+    font-family: Mina;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 218px;
+}
+
+.social-items {
+    display: flex;
+
+}
+
+.social-item1 {
+    width: 29px;
+    height: 29px;
+    background: url(./img/social/fb.svg) center no-repeat;
+}
+
+.social-item2 {
+    width: 29px;
+    height: 29px;
+    background: url(./img/social/twt.svg) center no-repeat;
+}
+
+.social-item3 {
+    width: 29px;
+    height: 29px;
+    background: url(./img/social/g+.svg) center no-repeat;
+}
+
+.social-item4 {
+    width: 29px;
+    height: 29px;
+    background: url(./img/social/hz.svg) center no-repeat;
+}
+
+.social-item5 {
+    width: 29px;
+    height: 29px;
+    background: url(./img/social/yt.svg) center no-repeat;
+}
+
+
+
+
+.footer__copyrights {
+    color: #908e8f;
+    font-family: Mina;
+    font-size: 14px;
+    font-weight: 400;
+}
 
 
 
