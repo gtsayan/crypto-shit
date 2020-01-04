@@ -17,20 +17,23 @@ body {
     max-width: 1524px;
     display: flex;
     margin: 0 auto;
+    background-color: rgb(219, 212, 212);
 
 
 }
 
+
+
 .container {
     width: 100%;
     max-width: 1170px;
-    margin: 0 auto;
+    margin: 0 178px 0 103px;
 
 }
 
 .blocks {
     width: 100%;
-
+    background-color: #fff;
     /* padding: 0 50px 140px; */
 }
 
@@ -298,6 +301,8 @@ body {
     justify-content: center;
     align-items: center;
     padding: 13px;
+    width: 112px;
+    height: 43px;
 }
 
 .btn a {
@@ -306,11 +311,12 @@ body {
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
+    line-height: 1;
 }
 
 .block-header {
     border-radius: 2px;
-    border: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
     background-color: #fefefe;
     padding: 19px 19px 19px 32px;
 
@@ -458,11 +464,11 @@ body {
 /* <!-- ------------diagramm-feed-------------- --> */
 .diagramms-feed {
     width: 100%;
-    height: 575px;
+    /* height: 575px; */
 
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .diagramms {
@@ -472,6 +478,7 @@ body {
 
 .diagramm-item {
     border: 1px solid #e2e2e2;
+    margin-bottom: 20px;
 }
 
 .diagramm-item__header {
@@ -501,6 +508,15 @@ body {
     padding: 15px 13px;
 }
 
+.diagramm-item__obj {
+    background-image: url("./img/diagramms/diagramm.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 240px;
+    width: 576px;
+}
+
 .feed {
     width: 50%;
     margin-left: 10px;
@@ -511,12 +527,77 @@ body {
 .feed__header {
     display: flex;
     justify-content: space-between;
+    border: 1px solid #e2e2e2;
 }
 
-.block-header {}
 
-.feed_title {}
 
+.feed__title {
+    margin-right: 50px;
+}
+
+.feed__records {
+    border: 1px solid #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.feed__item {
+    padding: 30px 23px 25px 28px;
+}
+
+.feed__record-title {
+    display: flex;
+
+}
+
+.feed__record-logo {
+    background-image: url(./img/social-feed.png);
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+    border: 1px solid #e2e2e2;
+    background-size: 54px 54px;
+    background-repeat: no-repeat;
+}
+
+.feed__record-inner {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.feed__record-author {
+    color: #f5638c;
+    font-family: Mina;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.feed__record-date {
+    color: #605e5e;
+    font-family: Mina;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.record__text {
+    color: #000000;
+    font-family: Mina;
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+
+.record__text a {
+    color: #dd1590;
+    line-height: 30px;
+    text-decoration: underline;
+}
 
 
 
@@ -607,10 +688,97 @@ body {
 }
 
 
+.dummy {
+    width: 150px;
+    min-height: 100%;
+    max-height: 100%;
+    background-color: #fff;
+    position: relative;
+    z-index: 0;
+}
+
+.footer-addon {
+    width: 100%;
+    height: 150px;
+    background-color: #ebe9e8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
 
 .sidebar {
-    height: 100vh;
-    /* position: fixed; */
-    width: 150px;
+    min-height: 100%;
+    height: 100%;
+    position: absolute;
+    width: 75px;
     background-color: #f5638c;
+    padding-top: 75px;
+    z-index: 1;
+}
+
+.sidebar:hover {
+    width: 150px;
+    transition: all .3s linear;
+}
+
+.sidebar:hover .sidebar__item {}
+
+.sidebar:hover .item-text {
+    display: block;
+}
+
+.sidebar__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    border-top: 1px solid #ff8bac50;
+    border-bottom: 1px solid #ff8bac50;
+
+}
+
+.sidebar__item:hover {
+    background-color: #ff7ca1;
+}
+
+.sidebar__item:hover .item-picture {
+    display: none;
+
+    /* transition: all .3s linear; */
+}
+
+.sidebar__item:hover .item-picture-h {
+    display: block;
+    /* transition: all .3s linear; */
+
+}
+
+.sidebar__item:hover .item-text {
+    color: #d90f8b;
+    /* transition: all .3s ease-in; */
+}
+
+.sidebar__item a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+.item-picture {}
+
+.item-picture-h {
+    display: none;
+}
+
+.item-text {
+    display: none;
+    color: #ffffff;
+    font-family: Mina;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.45px;
 }

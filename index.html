@@ -6,16 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="media.css">
+    <!-- <link rel="stylesheet" href="media.css"> -->
     <link rel="stylesheet" href="tmp.css">
     <link href="https://fonts.googleapis.com/css?family=Mina:400,700&display=swap" rel="stylesheet">
     <title>Заголовок</title>
 </head>
 
 <body>
-    <div class="sidebar"></div>
 
 
+
+    <div class="dummy">
+        <div class="sidebar">
+            <div class="sidebar__item"><a href="">
+                    <div class="item-picture"><img src="./img/sidebar/ICO_Home.svg" alt=""></div>
+                    <div class="item-picture-h"><img src="./img/sidebar/ICO_Home-h.svg" alt=""></div>
+                    <div class="item-text">Home</div>
+                </a>
+            </div>
+            <div class="sidebar__item"><a href="">
+                    <div class="item-picture"><img src="./img/sidebar/ICO_Buy_BTC.svg" alt=""></div>
+                    <div class="item-picture-h"><img src="./img/sidebar/ICO_Buy_BTC-h.svg" alt=""></div>
+                    <div class="item-text">Buy Bticoin</div>
+                </a>
+            </div>
+            <div class="sidebar__item"><a href="">
+                    <div class="item-picture"><img src="./img/sidebar/ICO_Sell_BTC.svg" alt=""></div>
+                    <div class="item-picture-h"><img src="./img/sidebar/ICO_Sell_BTC-h.svg" alt=""></div>
+                    <div class="item-text">Sell Bticoin</div>
+                </a>
+            </div>
+            <div class="sidebar__item"><a href="">
+                    <div class="item-picture"><img src="./img/sidebar/ICO_History.svg" alt=""></div>
+                    <div class="item-picture-h"><img src="./img/sidebar/ICO_History-h.svg" alt=""></div>
+                    <div class="item-text">History</div>
+                </a>
+            </div>
+            <div class="sidebar__item"><a href="">
+                    <div class="item-picture"><img src="./img/sidebar/ICO_Settings.svg" alt=""></div>
+                    <div class="item-picture-h"><img src="./img/sidebar/ICO_Settings-h.svg" alt=""></div>
+                    <div class="item-text">Settings</div>
+                </a>
+            </div>
+            <div class="sidebar__item"><a href="">
+                    <div class="item-picture"><img src="./img/sidebar/logout.svg" alt=""></div>
+                    <div class="item-picture-h"><img src="./img/sidebar/logout-h.svg" alt=""></div>
+                    <div class="item-text">Log out</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-addon"></div>
+    </div>
 
 
     <!-- ------------blocks-------------- -->
@@ -105,7 +147,7 @@
 
                 </div>
             </div>
-            <div class="transaction-history"></div>
+            <div class="transaction-history container"></div>
         </div>
         <!-- ------------diagramm-feed-------------- -->
         <div class="diagramms-feed container">
@@ -119,6 +161,17 @@
                         </div>
                         <div class="diagramm-item__btn btn"><a href="">Buy Bitcoin</a></div>
                     </div>
+                    <div class="diagramm-item__obj"></div>
+                </div>
+                <div class="diagramm-item">
+                    <div class="diagramm-item__header block-header">
+                        <div class="diagramm-item__title">
+                            Bitcoin Selling Price: <span class="diagramm-item__price">12’121,22</span> <span
+                                class="currensy-small">AUD</span>
+                        </div>
+                        <div class="diagramm-item__btn btn"><a href="">Sell Bitcoin</a></div>
+                    </div>
+                    <div class="diagramm-item__obj"></div>
                 </div>
             </div>
 
@@ -126,11 +179,29 @@
             <!-- ------------feed-------------- -->
             <div class="feed">
                 <div class="feed__header block-header">
-                    <div class="feed_title">Social Media Feed</div>
+                    <div class="feed__title">Social Media Feed</div>
                     <div class="btn"><a href="">See More</a></div>
                     <div class="btn"><a href="">Update</a></div>
                 </div>
+                <div class="feed__records">
+                    <div class="feed__item">
 
+                        <div class="feed__record-title">
+                            <div class="feed__record-logo"></div>
+                            <div class="feed__record-inner">
+
+                                <div class="feed__record-author">Bitcoin Babe</div>
+                                <div class="feed__record-date">March 07, 2018</div>
+                            </div>
+                        </div>
+
+                        <div class="record__text">
+                            US Marshals Service To Sell Nearly $25 Mln Worth Of Seized
+                            Bitcoin At Auction <a href="">http://ow.ly/8R4E30iNkkY</a>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
         </div>
